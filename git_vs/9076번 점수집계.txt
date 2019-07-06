@@ -1,0 +1,16 @@
+import sys
+from collections import deque
+if __name__=='__main__':
+    test=int(input())
+    for i in range(test):
+        a=[*map(int,input().split())]
+        a.sort()
+        a=deque(a)
+        s=sum(a)
+        a.pop()
+        a.popleft()
+        dis=a[len(a)-1]-a[0]
+        if dis>=4:
+            print('KIN')
+        else:
+            print(sum(a))

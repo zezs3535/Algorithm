@@ -1,0 +1,26 @@
+alpha=input()
+num=list(alpha)
+count=0
+i=0
+for i in range(len(num)):
+    if 'A'<=num[i] and num[i]<='C':
+        count+=3
+    elif 'D'<=num[i] and num[i]<='F':
+        count+=4
+    elif 'G'<=num[i] and num[i]<='I':
+        count+=5
+    elif 'J'<=num[i] and num[i]<='L':
+        count+=6
+    elif 'M'<=num[i] and num[i]<='O':
+        count+=7
+    elif 'P'<=num[i] and num[i]<='S':
+        count+=8
+    elif 'T'<=num[i] and num[i]<='V':
+        count+=9
+    elif 'W'<=num[i] and num[i]<='Z':
+        count+=10
+
+print(count)
+
+
+    

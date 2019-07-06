@@ -1,0 +1,10 @@
+test=int(input())
+for i in range(test):
+    stu=list(map(int,input().split())) #stu[0] = ÇĞ»ı ¼ö
+    n=stu.pop(0)
+    ave=sum(stu)//n
+    cnt=0
+    for j in range(n):
+        if stu[j]>ave:
+            cnt+=1
+    print("%0.3f"%((cnt/n)*100)+'%')

@@ -1,0 +1,19 @@
+import math
+
+if __name__=="__main__":
+    n=int(input())
+    dp=[0,1,2,3]
+    for i in range(4,n+1):
+        mini=i
+        limit=int(math.sqrt(i))
+        for j in range(1,limit+1):
+            p=j**2
+            if i==p:
+                mini=1
+                break
+            else:
+                temp=dp[i-p]+1
+                if temp<mini:
+                    mini=temp
+        dp.append(mini)
+    print(dp[n])

@@ -1,0 +1,8 @@
+num=[]
+cnt=[0]*101
+for i in range(10):
+    n=int(input())
+    num.append(n)
+    cnt[n//10]+=1
+print(sum(num)//10)
+print(cnt.index(max(cnt))*10)

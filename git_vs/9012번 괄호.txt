@@ -1,0 +1,14 @@
+import sys
+case=int(input())
+for i in range(case):
+    ps=sys.stdin.readline()
+    l=len(ps)
+    for j in range(l):
+        if '()' in ps:
+            ps=ps.replace('()','')
+    if ps=='\n':
+        print('YES')
+    else:
+        print('NO')
+            
+    

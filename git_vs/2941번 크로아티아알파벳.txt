@@ -1,0 +1,20 @@
+s=input()
+cnt=0
+for i in range(len(s)):
+    if 'c=' in s:
+        s=s.replace('c=','%')
+    if 'c-' in s:
+        s=s.replace('c-','%')
+    if 'dz=' in s:
+        s=s.replace('dz=','%')
+    if 'd-' in s:
+        s=s.replace('d-','%')
+    if 'lj' in s:
+        s=s.replace('lj','%')
+    if 'nj' in s:
+        s=s.replace('nj','%')
+    if 's=' in s:
+        s=s.replace('s=','%')
+    if 'z=' in s:
+        s=s.replace('z=','%')
+print(len(s))

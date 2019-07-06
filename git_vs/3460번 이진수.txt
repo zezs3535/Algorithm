@@ -1,0 +1,16 @@
+import sys
+def binary(a,m):
+    while a>=1:
+        m.append(a%2)
+        a=a//2
+if __name__=='__main__':
+    test=int(input())
+    for i in range(test):
+        m=[]
+        num=int(sys.stdin.readline().strip())
+        binary(num,m)
+        for j in range(len(m)-1):
+            if m[j]==1:
+                print(j,end=' ')
+        if m[len(m)-1]==1:
+            print(len(m)-1)

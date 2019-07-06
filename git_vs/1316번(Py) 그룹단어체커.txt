@@ -1,0 +1,22 @@
+def check(word):
+    count=[]
+    for x in range(26):
+        count.append('F')
+    for j in range(len(word)):
+        if count[ord(word[j])-97]=='F':
+            count[ord(word[j])-97]='T'
+        elif count[ord(word[j])-97]=='T':
+            if word[j]==word[j-1]:
+                continue
+            elif word[j]!=word[j-1]:
+                return False
+    return True
+ret=0
+test=int(input())
+for i in range(test):
+    word=input()
+    if check(word)==True:
+        ret+=1
+    elif check(word)==False:
+        continue
+print(ret)

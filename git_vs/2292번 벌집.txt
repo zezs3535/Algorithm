@@ -1,0 +1,12 @@
+test=int(input())
+if test==1:
+    print('1')
+elif test>=2 and test<=7:
+    print('2')
+else:
+    ran=6
+    en=7
+    while en<test:
+        ran+=6
+        en+=ran
+    print((ran//6)+1)

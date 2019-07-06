@@ -1,0 +1,30 @@
+import math
+
+a=[0]*10002
+n=int(input())
+m=int(input())
+cnt=0
+for i in range(n,m+1):
+    if i==0:
+        continue         #for문을 break하면 안돼!!!
+    elif i==2:
+        continue
+    elif i==3:
+        continue
+    if i%(int(math.sqrt(i)))**2==0: #완전제곱수이면
+        if i//(int(math.sqrt(i)))**2==1:
+            a[i]=i
+            cnt+=1
+        
+
+while True:   #0은 다 지워준다
+    if 0 in a:
+        a.remove(0)
+    else:
+        break
+
+if cnt>0:
+    print(sum(a),min(a))
+else:
+    print(-1)
+            

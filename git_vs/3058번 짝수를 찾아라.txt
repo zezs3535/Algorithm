@@ -1,0 +1,10 @@
+import sys
+if __name__=='__main__':
+    test=int(input())
+    for i in range(test):
+        a=[*map(int,input().split())]
+        t=[]
+        for j in range(7):
+            if a[j]%2==0:
+                t.append(a[j])
+        print(sum(t),min(t))

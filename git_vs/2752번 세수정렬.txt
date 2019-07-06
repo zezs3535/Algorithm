@@ -1,0 +1,5 @@
+q,w,e=map(int,input().split())
+a=[q,w,e]
+a.sort()
+for i in a:
+    print(i,end=' ')

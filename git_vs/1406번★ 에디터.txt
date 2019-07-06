@@ -1,0 +1,20 @@
+import sys
+from collections import deque
+left=deque(sys.stdin.readline().rstrip()) #문자열
+right=deque()
+t=int(sys.stdin.readline().rstrip()) #명령 횟수
+for i in range(t):
+    q=sys.stdin.readline().split()
+    if q[0]=='L':
+        if left!=deque():
+            right.appendleft(left.pop())
+    elif q[0]=='D':
+        if right!=deque():
+            left.append(right.popleft())
+    elif q[0]=='B':
+        if left!=deque():
+            left.pop()
+    elif q[0]=='P':
+        left.append(q[1])
+
+print(''.join(left)+''.join(right))

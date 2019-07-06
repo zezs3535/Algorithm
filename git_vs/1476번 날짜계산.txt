@@ -1,0 +1,7 @@
+e,s,m=map(int,input().split())
+for i in range(1,7981): #0~7980
+    if e==((i-1)%15)+1:
+        if s==((i-1)%28)+1:
+            if m==((i-1)%19)+1:
+                print(i)
+                break
