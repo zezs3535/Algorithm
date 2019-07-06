@@ -1,0 +1,26 @@
+if __name__=="__main__":
+    n=int(input())
+    pair=int(input())
+    table=[[0]*(n+1) for i in range(n+1)]
+    visit=[0]*101 #1이랑 연결된 것
+    q=set()
+    a=0
+    for i in range(pair):  #table에 표시
+        i1,i2=map(int,input().split())
+        table[i1][i2]=1
+        table[i2][i1]=1
+    for i in range(1,n+1):
+        if table[1][i]==1:
+            q.add(i)
+            visit[i]=1
+            table[1][i]=0
+            table[i][1]=0
+    while q!=set():
+        a=q.pop()
+        for i in range(1,n+1):
+            if table[a][i]==1:
+                q.add(i)
+                visit[i]=1
+                table[a][i]=0
+                table[i][a]=0
+    print(sum(visit))

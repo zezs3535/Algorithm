@@ -1,0 +1,27 @@
+m=1000-int(input())
+cnt=0
+while m:
+    if m//500:
+        cnt=m//500
+        m=m%500
+        continue
+    if m//100:
+        cnt+=m//100
+        m=m%100
+        continue
+    if m//50:
+        cnt+=m//50
+        m=m%50
+        continue
+    if m//10:
+        cnt+=m//10
+        m=m%10
+        continue
+    if m//5:
+        cnt+=m//5
+        m=m%5
+        continue
+    if m//1:
+        cnt+=m
+        break
+print(cnt)

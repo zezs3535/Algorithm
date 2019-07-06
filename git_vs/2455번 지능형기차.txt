@@ -1,0 +1,10 @@
+m=0
+s=0
+for i in range(4):
+    a,b=map(int,input().split())
+    s=s+(b-a)
+    if i==0:
+        m=s
+    if m<s:
+        m=s
+print(m)

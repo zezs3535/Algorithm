@@ -1,0 +1,8 @@
+test=int(input())
+for i in range(test):
+    n,s=input().split() #n=문자열 반복,s=문자열
+    n=int(n)
+    s=list(s)
+    for j in s:
+        print(n*j,end='')
+    print()

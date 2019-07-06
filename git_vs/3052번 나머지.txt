@@ -1,0 +1,8 @@
+a=[]
+n=[0]*42
+for i in range(10):
+    inp=int(input())
+    a.append(inp%42)
+    if n[inp%42]==0:
+        n[inp%42]+=1
+print(sum(n))

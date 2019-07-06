@@ -1,0 +1,6 @@
+test=int(input())
+for i in range(test):
+    n=input()
+    A=[*map(int,input().split())]
+    dis=max(A)-min(A)
+    print(dis*2)

@@ -1,0 +1,8 @@
+import sys
+e,f,c=map(int,(sys.stdin.readline().strip()).split())
+s=e+f
+cnt=0
+while s>=c:
+    cnt=cnt+(s//c)
+    s=(s//c)+(s%c)
+print(cnt)

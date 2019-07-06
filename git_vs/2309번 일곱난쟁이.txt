@@ -1,0 +1,18 @@
+n=[]
+s=[]
+for i in range(9):
+    n.append(int(input()))
+key=sum(n)-100
+n.sort()
+for i in range(8):
+    for j in range(i+1,9):
+        if n[i]+n[j]==key:
+            s.append(i)
+            s.append(j)
+            break
+    if s!=[]:
+        break
+for i in range(9):
+    if i in s:
+        continue
+    print(n[i])

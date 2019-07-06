@@ -1,0 +1,37 @@
+if __name__=='__main__':
+    n,m=map(int,input().split())
+    a=[[0] * m for i in range(n)]
+    visit=[[0] * m for i in range(n)]
+    dx=[1,0,-1,0]
+    dy=[0,1,0,-1]
+    
+    for i in range(n):
+        t=[*map(int,input().split())]
+        for j in range(m):
+            a[i][j]=t[j]
+    stack=[]
+    cnt=0
+    mx=0
+    for i in range(0,n):
+        for j in range(0,m):
+            if a[i][j]==0 or visit[i][j]==1:
+                continue
+            visit[i][j]=1
+            cnt+=1
+            stack.append((i,j))
+            area=0
+            while stack!=[]:
+                area+=1
+                cx,cy=stack.pop()
+                for d in range(4):
+                    nx=dx[d]+cx
+                    ny=dy[d]+cy
+                    if nx<0 or nx>=n or ny<0 or ny>=m:
+                        continue
+                    if visit[nx][ny]==1 or a[nx][ny]==0:
+                        continue
+                    visit[nx][ny]=1
+                    stack.append((nx,ny))
+            mx=max(area,mx)
+    print(cnt)
+    print(mx)

@@ -1,0 +1,29 @@
+from collections import deque
+if __name__=='__main__':
+    n,m=map(int,input().split())
+    visit=[[-1]*m for i in range(n)]
+    maze=[list(map(int,input())) for _ in range(n)]
+    dx=[1,0,-1,0]
+    dy=[0,1,0,-1]
+    dis=1
+    queue=deque()
+    for i in range(n):
+        for j in range(m):
+            if maze[i][j]==0 or visit[i][j]!=-1:
+                continue
+            visit[i][j]=dis
+            queue.append((i,j))
+            while queue!=deque():
+                cnt=0
+                cx,cy=queue.popleft()
+                dis+=1
+                for d in range(4):
+                    nx=dx[d]+cx
+                    ny=dy[d]+cy
+                    if nx<0 or nx>=n or ny<0 or ny>=m:
+                        continue
+                    if visit[nx][ny]!=-1 or maze[nx][ny]==0:
+                        continue
+                    visit[nx][ny]=visit[cx][cy]+1
+                    queue.append((nx,ny))
+    print(visit[n-1][m-1])

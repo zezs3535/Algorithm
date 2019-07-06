@@ -1,0 +1,7 @@
+mu=list(map(int,input().split()))
+if mu==sorted(mu):
+    print('ascending')
+elif mu==sorted(mu,reverse=True):
+    print('descending')
+else:
+    print('mixed')

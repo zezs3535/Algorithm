@@ -1,0 +1,11 @@
+def gcd(b,s):      //최대공약수*최대공배수=두수의 곱
+    if b%s==0:
+        return s
+    return gcd(s,b%s)
+
+test=int(input())
+for i in range(test):
+    n1,n2=map(int,input().split())
+    num=gcd(n2,n1)
+    ans=(n1*n2)//num
+    print(ans)
