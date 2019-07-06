@@ -1,0 +1,21 @@
+from math import *
+test=int(input())
+for i in range(test):
+    cnt=0
+    x,y=map(int,input().split())
+    dis=y-x
+    if dis<4:
+        print(dis)
+        continue
+    a=floor(sqrt(dis))
+    if dis==a**2:
+        cnt=2*a-1
+        print(cnt)
+        continue
+    elif dis>a**2 and (a+1)**2>=dis:
+        if (dis%(a**2))<=a:
+            cnt=2*a
+            print(cnt)
+        else:
+            cnt=2*a+1
+            print(cnt)
