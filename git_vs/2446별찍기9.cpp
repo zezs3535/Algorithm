@@ -23,7 +23,7 @@ int main()
 		for (j = 1; j < k; j++) { 
 			printf(" ");
 		}
-		for (i = 1; i <= 2*(n-k)+1; i++) {//
+		for (i = 1; i <= 2*(n-k)+1; i++) {
 			printf("*");
 		}
 		printf("\n");
