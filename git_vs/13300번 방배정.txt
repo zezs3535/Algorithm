@@ -1,0 +1,17 @@
+if __name__=="__main__":
+    n,k=map(int,input().split())
+    stu=[[0]*6 for i in range(2)]
+    for i in range(n):
+        a,b=map(int,input().split())
+        stu[a][b-1]+=1
+    room=0
+    for i in range(2):
+        for j in range(6):
+            while stu[i][j]:
+                if stu[i][j]<k:
+                    room+=1
+                    break
+                else:
+                    room+=(stu[i][j]//k)
+                    stu[i][j]%=k
+    print(room)
