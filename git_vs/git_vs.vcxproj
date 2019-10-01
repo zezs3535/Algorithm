@@ -79,6 +79,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <StackReserveSize>130000000</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,7 +119,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11726 2xn 타일링.cpp" />
+    <ClCompile Include="1463 1로만들기.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
