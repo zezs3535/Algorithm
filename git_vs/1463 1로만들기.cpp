@@ -1,6 +1,5 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
+#include <cmath>
 #define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
@@ -11,25 +10,42 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int n;
-	cin >> n;
-	int dp[1000001];
-	dp[0] = 0;
-	dp[1] = 0;
-	dp[2] = 1;
-	dp[3] = 1;
-	if (n > 3) {
-		for (int i = 4; i <= n; i++) {
-			vector<int> check;
-			check.push_back(dp[i - 1]);
-			if (i % 2 == 0) //2로 나누어지면 dp[i/2]의 값을 check에 저장 ( 어차피 마지막에 min값에 +1 하니까 )
-				check.push_back(dp[i / 2]);
-			if (i % 3 == 0) //2로 나누어질때랑 동일
-				check.push_back(dp[i / 3]);
-			dp[i] = *min_element(check.begin(), check.end()) + 1;
-		}
+	long long w;
+	long long coin = 0;
+	int s[16]; //그날의 주가
+	int a[16]; //기울기
+	int cnt=0;
+	cin >> n >> w;
+	for (int i = 1; i <= n; i++) {
+		cin >> s[i];
 	}
-	
-
-	cout << dp[n];
+	for (int i = 1; i < n; i++) {
+		a[i] = s[i + 1] - s[i];
+		if (a[i] > 0)
+			cnt++;
+	}
+	if (!cnt)
+		cout << w;
+	else {
+		for (int i = 1; i < n; i++) {
+			if (a[i]>0) {
+				if (coin)
+					continue;
+				else {
+					coin = w / s[i];
+					w %= s[i];
+				}
+			}
+			else if (a[i]<0) {
+				if (coin) {
+					w = w + (coin * s[i]);
+					coin = 0;
+				}
+			}
+		}
+		if (coin)
+			w += (coin*s[n]);
+		cout << w;
+	}
 	return 0;
 }
