@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2798번 블랙잭.cpp">
+    <ClCompile Include="1012번 유기농배추.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
