@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="16360번 Go Latin.cpp">
+    <ClCompile Include="1654번 랜선자르기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
