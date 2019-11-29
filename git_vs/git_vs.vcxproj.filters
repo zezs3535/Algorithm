@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2805번 나무 자르기.cpp">
+    <ClCompile Include="17968번 Fire on Field%28acmicpc%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
