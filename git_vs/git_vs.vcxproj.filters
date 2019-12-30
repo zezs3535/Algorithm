@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="15969번 행복.cpp">
+    <ClCompile Include="15970번 화살표 그리기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
