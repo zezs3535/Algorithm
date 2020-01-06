@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2193번 이친수.cpp">
+    <ClCompile Include="10844번 쉬운계단수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
