@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1991번 트리 순회.cpp">
+    <ClCompile Include="Round613 Mezo Playing Zoma.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
