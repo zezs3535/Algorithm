@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1149번 RGB거리.cpp">
+    <ClCompile Include="2156번 포도주시식.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
