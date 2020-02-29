@@ -22,11 +22,11 @@ int main() {
 		dp[1][1] = max(dp[1][0], dp[0][0] + dp[1][1]);
 		for (int j = 2; j < n; j++) {
 			for (int i = 0; i < 2; i++) {
-				dp[i][j] = max(dp[(i + 1) % 2][j - 1], dp[i][j - 2]) + dp[i][j];
+				dp[i][j] = max(dp[(i + 1) % 2][j - 1], dp[i][j - 2])+dp[i][j];
 				dp[i][j] = max(dp[i][j], dp[i][j - 1]);
 			}
 		}
-		cout << max(dp[0][n - 1], dp[1][n - 1]) << "\n";
+		cout << max(dp[0][n - 1], dp[1][n - 1])<<"\n";
 	}
 
 	return 0;
