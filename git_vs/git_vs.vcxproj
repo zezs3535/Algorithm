@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="11053번 가장 긴 증가하는 부분 수열LIS.cpp" />
     <ClCompile Include="소스.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
