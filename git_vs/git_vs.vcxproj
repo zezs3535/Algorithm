@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1890번 점프.cpp" />
-    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="1915번 가장 큰 정사각형.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
