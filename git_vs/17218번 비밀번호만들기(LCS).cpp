@@ -1,8 +1,7 @@
-#include <iostream>
-#include <algorithm>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
+
 vector<char> p;
 void print(vector<vector<int> > &q, vector<char> &x, int i, int j) {
 	if (i == 0 || j == 0)return;
@@ -52,7 +51,7 @@ int main() {
 	}
 	print(q, x, m, n);
 	//cout << c[m][n] << "\n";
-	for (int i = 0; i <p.size(); i++) {
+	for (int i = 0; i < p.size(); i++) {
 		cout << p[i];
 	}
 	return 0;
