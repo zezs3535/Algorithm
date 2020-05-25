@@ -3,7 +3,9 @@
 using namespace std;
 
 int main() {
-	cout << "hello";
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 
+	cout << "hello";
 	return 0;
 }
