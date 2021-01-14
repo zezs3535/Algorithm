@@ -12,7 +12,6 @@ public class Day01_First {
 		int n = sc.nextInt();
 		for(int i=n;i>=0;i--) {
 			System.out.print(i+" ");
-			System.out.println("3333");
 		}
 	}
 }
