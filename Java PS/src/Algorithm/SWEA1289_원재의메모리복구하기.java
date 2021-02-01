@@ -24,7 +24,7 @@ public class SWEA1289_원재의메모리복구하기 {
 					}
 					break;
 				}
-			} 
+			}
 			System.out.println("#" + i + " " + answer);
 		}
 	}
