@@ -17,8 +17,10 @@ public class SWEA4615_재미있는오셀로게임 {
 				int nx = x + dx[idx] * cnt;
 				if(ny>=n || ny<0 || nx>=n || nx<0)break;
 				if(arr[ny][nx]==0)break;
-				if(arr[ny][nx]!=curColor)continue;
-				cnt++;
+				if(arr[ny][nx]!=curColor) {
+					cnt++;
+					continue;
+				}
 				if(arr[ny][nx]==curColor) {
 					flag=true;
 					cnt--;
@@ -27,10 +29,8 @@ public class SWEA4615_재미있는오셀로게임 {
 			} 
 			if(flag) {
 				for(int i=1;i<=cnt;i++) {
-					int ny = y + dy[idx] * cnt;
-					int nx = x + dx[idx] * cnt;
-					//System.out.println(ny + " " + nx);
-					//System.out.println(arr[ny][nx]);
+					int ny = y + dy[idx] * i;
+					int nx = x + dx[idx] * i;
 					arr[ny][nx] = curColor;
 				}
 			}
@@ -55,6 +55,10 @@ public class SWEA4615_재미있는오셀로게임 {
 			int[][] arr = new int[n][n];
 			bl=0;
 			wh=0;
+			arr[(n-1)/2][(n-1)/2]=2;
+			arr[n/2][n/2]=2;
+			arr[(n-1)/2][n/2]=1;
+			arr[n/2][(n-1)/2]=1;
 			for(int i=0;i<m;i++) {
 				int q = sc.nextInt();
 				int w = sc.nextInt();
@@ -63,12 +67,6 @@ public class SWEA4615_재미있는오셀로게임 {
 				go(arr,q-1,w-1);
 			}
 			count(arr);
-			for(int i=0;i<4;i++) {
-				for(int j=0;j<4;j++) {
-					System.out.print(arr[i][j]);
-				}
-				System.out.println();
-			}
 			System.out.println("#" + test + " " + bl + " " + wh);
 		}
 	}
