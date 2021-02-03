@@ -24,7 +24,7 @@ public class SWEA4615_재미있는오셀로게임 {
 					cnt--;
 					break;
 				}
-			}
+			} 
 			if(flag) {
 				for(int i=1;i<=cnt;i++) {
 					int ny = y + dy[idx] * cnt;
