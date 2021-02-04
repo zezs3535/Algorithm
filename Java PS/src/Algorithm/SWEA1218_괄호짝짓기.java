@@ -16,7 +16,7 @@ public class SWEA1218_괄호짝짓기 {
 				if(s.charAt(i)=='('||s.charAt(i)=='{'||s.charAt(i)=='['||s.charAt(i)=='<') {
 					st.push(s.charAt(i));
 					continue;
-				}
+				} 
 				if(s.charAt(i)==')') {
 					if(st.peek()=='(') {
 						st.pop();
