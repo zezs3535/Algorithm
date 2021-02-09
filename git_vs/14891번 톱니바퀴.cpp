@@ -4,6 +4,20 @@ using namespace std;
 
 typedef pair<int, int> pii;
 
+void shiftQueue(deque<char>& dq, int dir) {
+	char tmp;
+	if (dir > 0) {
+		tmp = dq.back();
+		dq.pop_back();
+		dq.push_front(tmp);
+	}
+	else {
+		tmp = dq.front();
+		dq.pop_front();
+		dq.push_back(tmp);
+	}
+}
+
 //Àç±Í·Î ¿òÁ÷ÀÌ·Á´Â Åé´Ï¹ÙÄûÀÇ ¿ŞÂÊÀ¸·Î Âß È®ÀÎ
 void shiftLeftQueue(vector<deque<char>>& arr, int target, int dir) {
 	if (target < 0)return;
@@ -13,16 +27,7 @@ void shiftLeftQueue(vector<deque<char>>& arr, int target, int dir) {
 	}
 	else {
 		shiftLeftQueue(arr, target - 1, (dir > 0) ? -1 : 1);
-		if (dir > 0) {
-			tmp = arr[target].back();
-			arr[target].pop_back();
-			arr[target].push_front(tmp);
-		}
-		else {
-			tmp = arr[target].front();
-			arr[target].pop_front();
-			arr[target].push_back(tmp);
-		}
+		shiftQueue(arr[target], dir);
 	}
 }
 
@@ -35,16 +40,7 @@ void shiftRightQueue(vector<deque<char>>& arr, int target, int dir) {
 	}
 	else {
 		shiftRightQueue(arr, target + 1, (dir > 0) ? -1 : 1);
-		if (dir > 0) {
-			tmp = arr[target].back();
-			arr[target].pop_back();
-			arr[target].push_front(tmp);
-		}
-		else {
-			tmp = arr[target].front();
-			arr[target].pop_front();
-			arr[target].push_back(tmp);
-		}
+		shiftQueue(arr[target], dir);
 	}
 }
 
@@ -69,16 +65,7 @@ int main() {
 		char tmp;
 		shiftLeftQueue(arr, target-1, (dir > 0) ? -1 : 1);
 		shiftRightQueue(arr, target+1, (dir > 0) ? -1 : 1);
-		if (dir > 0) {
-			tmp = arr[target].back();
-			arr[target].pop_back();
-			arr[target].push_front(tmp);
-		}
-		else {
-			tmp = arr[target].front();
-			arr[target].pop_front();
-			arr[target].push_back(tmp);
-		}
+		shiftQueue(arr[target], dir);
 	}
 	for (int i = 0; i < 4; i++) {
 		if (arr[i][0] == '1')answer += cnt;
