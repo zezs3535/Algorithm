@@ -59,5 +59,4 @@ public class BOJ3109_빵집 {
 		bw.flush();
 		bw.close();
 	}
-
 }
