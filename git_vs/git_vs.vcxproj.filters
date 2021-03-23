@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2502번 떡먹는호랑이.cpp">
+    <ClCompile Include="9935번 문자열폭발.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

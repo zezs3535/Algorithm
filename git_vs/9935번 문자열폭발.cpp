@@ -6,46 +6,34 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 	cout.tie(0);
-	vector<char> s;
-	string tmp; cin >> tmp;
-	int bombCnt = 0;
-	for (int i = 0; i < tmp.size(); i++) {
-		s.push_back(tmp[i]);
-	}
-
+	string in; cin >> in;
 	string bomb; cin >> bomb;
-	s.push_back(',');
-	for (int i = 0; i < s.size(); i++) {
-		if (s[i] == '.')continue;
-		int idx = 0;
-		int hit = 0;
-		while (s[i + idx] == bomb[hit] || s[i+idx]=='.') { //계속 같으면
-			if (s[i + idx] == ',')break;
-			if (s[i + idx] != '.')hit++;
-			idx++;
-		}
-		if (hit == bomb.size()) { //터지면?
-			for (int j = 0; j < idx; j++) {
-				s[i + j] = '.';
+	string s = "";
+	for (int i = 0; i < in.size(); i++) {
+		int idx = i;
+		s.push_back(in[i]); //한글자 넣고
+		if (bomb[bomb.size() - 1] == in[i]) { //지금 넣은게 폭탄 맨 뒤랑 같으면?
+			bool canBomb = true;
+			for (int j = 0; j < bomb.size(); j++) {
+				if(s.size()-1<j){
+					canBomb = false;
+					break;
+				}
+				if (s[s.size()-1 - j] != bomb[bomb.size() - 1 - j]) {
+					canBomb = false;
+					break;
+				}
 			}
-			bombCnt++;
-			i -= bomb.size()*bombCnt;
-			if (i <= 0)i = -1;
+			if (canBomb) {
+				for (int j = 0; j < bomb.size(); j++) {
+					s.pop_back();
+				}
+			}
 		}
 	}
-	bool flag = false;
-	string answer = "";
-	for (int i = 0; i < s.size()-1; i++) {
-		if (s[i] != '.') {
-			flag = true;
-			answer += s[i];
-		}
-	}
-	if (flag) {
-		cout << answer;
-	}
+	if (s.empty())cout << "FRULA";
 	else {
-		cout << "FRULA";
+		cout << s;
 	}
 	return 0;
 }
