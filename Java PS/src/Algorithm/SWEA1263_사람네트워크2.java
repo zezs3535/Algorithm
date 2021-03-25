@@ -33,12 +33,6 @@ public class SWEA1263_사람네트워크2 {
 				}
 			}
 			int answer = Integer.MAX_VALUE;
-//			for (int i = 0; i < n; i++) {
-//				for (int j = 0; j < n; j++) {
-//					System.out.print(adj[i][j] + " ");
-//				}
-//				System.out.println();
-//			}
 			for (int i = 0; i < n; i++) {
 				int cnt = 0;
 				for (int j = 0; j < n; j++) {
