@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1477번 휴게소세우기.cpp" />
     <ClCompile Include="소스.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
