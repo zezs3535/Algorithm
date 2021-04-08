@@ -55,6 +55,12 @@ int main() {
 		n /= 2;
 	}
 	//ans = go(arr, n-m+1);
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << ans[i][j] << " ";
+		}
+		cout << "\n";
+	}
 	long long answer = 0;
 	for (int i = 0; i < m; i++) {
 		answer += (ans[0][i] % MOD) % MOD;
