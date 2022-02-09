@@ -17,7 +17,7 @@ public class BOJ2999_비밀이메일 {
 		int y = 0;
 		int x = 0;
 		for(int i=n;i>0;i--) {
-			for(int j=1;j<=n;j++) {
+			for(int j=1;j<=n;j++) { 
 				if(n == i*j && i<=j) { //곱이 같고 R<=C 일때
 					y=i;
 					x=j;
