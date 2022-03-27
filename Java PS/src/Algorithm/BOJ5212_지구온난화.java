@@ -48,12 +48,10 @@ public class BOJ5212_지구온난화 {
 				for (int idx = 0; idx < 4; idx++) {
 					ny = i + dy[idx];
 					nx = j + dx[idx];
-					if (ny >= n || ny < 0 || nx >= m || nx < 0) {
+					if (ny >= n || ny < 0 || nx >= m || nx < 0 || arr[ny][nx] == 0) {
 						seaCnt++;
 						continue;
 					}
-					if (arr[ny][nx] == 0)
-						seaCnt++;
 				}
 				if (seaCnt > 2)
 					afterArr[i][j] = 0;
