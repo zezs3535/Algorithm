@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class BOJ1431_시리얼번호 {
-
+ 
 	public static void main(String[] args) throws Exception {
 		System.setIn(new FileInputStream("input.txt"));
 		Scanner sc = new Scanner(System.in);
