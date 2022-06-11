@@ -1,27 +1,15 @@
 class Solution {
     public int balancedStringSplit(String s) {
         int ans = 0;
-        int n = s.length();
-        int rcnt=0;
-        int lcnt=0;
-        
-        for(int i=0;i<n;i++){
+        int cnt = 0;
+        for(int i=0;i<s.length();i++){
             if(s.charAt(i) == 'R'){
-                rcnt++;
-                if(lcnt > 0 && lcnt == rcnt){
-                    ans++;
-                    lcnt=0;
-                    rcnt=0;
-                }
+                cnt++;
             }
-            else if(s.charAt(i)=='L'){
-                lcnt++;
-                if(rcnt > 0 && lcnt == rcnt){
-                    ans++;
-                    lcnt=0;
-                    rcnt=0;
-                }
+            else{
+                cnt--;
             }
+            if(cnt==0)ans++;
         }
         return ans;
     }
