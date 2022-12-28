@@ -1,12 +1,7 @@
 class Solution {
     public int minStoneSum(int[] piles, int k) {
         int ans = 0;
-        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>(){
-            @Override
-            public int compare(Integer o1,Integer o2){
-                return Integer.compare(o2,o1);
-            }
-        });
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->b-a);
         int n = piles.length;
         for(int i=0;i<n;i++){
             pq.add(piles[i]);
